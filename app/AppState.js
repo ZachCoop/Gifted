@@ -6,6 +6,8 @@ import { loadState } from "./Utils/Store.js"
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', Value)
+  /** @type {import('./Models/Gift').Gift[]} */
+  gifts = []
 }
 
 export const appState = new Proxy(new AppState(), {
